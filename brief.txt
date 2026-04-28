@@ -1,0 +1,13 @@
+Przygotowanie nowej "krótkiej" strony cezab-distribution
+
+- uwzględnienie podziału na CEZAB24, D-TECH, by D (prezentacja Mikołaj)
+
+- strona skrócona do minimum - strona główna uwzględniająca informacje o ofercie podzielonej na 3 powyższe
+
+    - krótki opis i dodanie linków do naszych stron z by D: salvosystem.pl, giovidoors.pl, gaposa.pl
+
+    - krótki opis i dodanie linku do dtechsystems.pl
+
+    - krótki opis i dodanie linki do cezab24.pl
+
+- dodanie informacji o dystrybucji produktów Wiśniowski, Motorline, BASE, Hotron (https://hotron.com/), Merawex
