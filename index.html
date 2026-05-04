@@ -51,161 +51,116 @@
 
   <main>
 
-    <!-- ===== HERO ===== -->
+    <!-- ===== HERO (Full-width slider) ===== -->
     <section id="hero" aria-labelledby="hero-title">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <div class="hero-eyebrow">
-            <span class="hero-eyebrow-dot"></span>
-            Twój partner w branży automatyki
-          </div>
-          <h1 class="hero-title" id="hero-title">
-            CEZAB Distribution –<br/><span>specjaliści w systemach automatyki, bram i przeładunków.</span>
-          </h1>
-          <p class="hero-subtitle">
-            Oferujemy kompleksowe rozwiązania, <strong>akcesoria oraz części serwisowe</strong>. Bazując na ponad 20 latach doświadczenia Grupy CEZAB, wspieramy na każdym etapie – od dystrybucji po serwis.
-          </p>
-          <div class="hero-actions">
-            <a href="#oferta" class="btn btn-primary btn-lg">
-              Poznaj naszą ofertę
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#kontakt" class="btn btn-outline btn-lg">Skontaktuj się</a>
-          </div>
-          <div class="hero-stats">
-            <div>
-              <div class="hero-stat-value">20+</div>
-              <div class="hero-stat-label">lat doświadczenia</div>
-            </div>
-            <div>
-              <div class="hero-stat-value">5</div>
-              <div class="hero-stat-label">dystrybuowanych marek</div>
-            </div>
-            <div>
-              <div class="hero-stat-value">3</div>
-              <div class="hero-stat-label">segmenty działalności</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="hero-video-column">
-          <div class="hero-video-wrap">
-            <video
-              id="heroVideo"
-              autoplay
-              muted
-              playsinline
-              preload="auto"
-              aria-hidden="true"
-            >
-              <source src="img/logo-movie.mp4" type="video/mp4" />
-              <!-- Tutaj warto dodać wersję .mp4 dla lepszej kompatybilności -->
-              Twoja przeglądarka nie obsługuje wideo.
-            </video>
-          </div>
-        </div>
+      <!-- Slides -->
+      <div class="hero-slide-wrap active" data-index="0" style="background-image: url('https://placehold.co/1920x1080/F5F5DC/333333?text=D-TECH')">
+      </div>
+      <div class="hero-slide-wrap" data-index="1" style="background-image: url('https://placehold.co/1920x1080/EBEBD3/333333?text=SALVO+by+D')">
+      </div>
+      <div class="hero-slide-wrap" data-index="2" style="background-image: url('https://placehold.co/1920x1080/E1E1C5/333333?text=GIOVI+by+D')">
+      </div>
+      <div class="hero-slide-wrap" data-index="3" style="background-image: url('https://placehold.co/1920x1080/D7D7B7/333333?text=GAPOSA+by+D')">
       </div>
 
-      <!-- Slider z logotypami marek -->
-      <div class="hero-brands-slider" aria-label="Nasze marki">
-        <div class="hero-brands-track">
-          <a href="https://cezab24.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item">
-            <img src="img/cezab24-logo.png" alt="CEZAB24" />
-            <span>cezab24.pl</span>
-          </a>
-          <a href="https://dtechsystems.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item">
-            <img src="img/d-tech-logo.png" alt="D-TECH" />
-            <span>dtechsystems.pl</span>
-          </a>
-          <a href="https://salvosystem.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item">
-            <img src="img/salvo-system-by-d-logo.png" alt="SALVO by D" />
-            <span>salvosystem.pl</span>
-          </a>
-          <a href="https://giovidoors.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item">
-            <img src="img/giovi-doors-by-d-logo.png" alt="GIOVI DOORS by D" />
-            <span>giovidoors.pl</span>
-          </a>
-          <!-- Duplikaty do płynnej pętli -->
-          <a href="https://cezab24.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item" aria-hidden="true">
-            <img src="img/cezab24-logo.png" alt="" />
-            <span>cezab24.pl</span>
-          </a>
-          <a href="https://dtechsystems.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item" aria-hidden="true">
-            <img src="img/d-tech-logo.png" alt="" />
-            <span>dtechsystems.pl</span>
-          </a>
-          <a href="https://salvosystem.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item" aria-hidden="true">
-            <img src="img/salvo-system-by-d-logo.png" alt="" />
-            <span>salvosystem.pl</span>
-          </a>
-          <a href="https://giovidoors.pl" target="_blank" rel="noopener noreferrer" class="hero-brand-item" aria-hidden="true">
-            <img src="img/giovi-doors-by-d-logo.png" alt="" />
-            <span>giovidoors.pl</span>
-          </a>
-        </div>
-      </div>
-    </section>
+      <!-- Overlay gradient -->
+      <div class="hero-overlay"></div>
 
-    <!-- ===== O NAS (Features) ===== -->
-    <section id="o-nas" class="section section--alt" aria-labelledby="o-nas-title">
-      <div class="container">
-        <span class="section-label">O nas</span>
-        <h2 class="section-title" id="o-nas-title">Dlaczego warto współpracować z CEZAB Distribution?</h2>
-        <p class="section-subtitle">Jesteśmy firmą multibrandową, która łączy wieloletnie doświadczenie z szeroką ofertą produktową i indywidualnym podejściem do klienta.</p>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🏆</div>
-            <h3 class="feature-title">Doświadczenie</h3>
-            <p class="feature-desc">Zespół specjalistów wywodzący się z firmy Grupa CEZAB – działającej w branży systemów automatyki, bram oraz systemów przeładunkowych.</p>
-            <p class="feature-desc" style="margin-top:10px">Od analizy potrzeb po własną politykę firmy – ponad 20 lat doświadczeń sprzedażowych i instalatorskich dla klientów B2B i B2C.</p>
+      <!-- Content -->
+      <div class="hero-inner">
+
+        <!-- Left: main text content -->
+        <div class="hero-text-slider">
+          
+          <!-- Slide 0: D-TECH -->
+          <div class="hero-content-block active" data-index="0">
+            <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>MARKA WŁASNA</p>
+            <h1 class="hero-title">D-TECH Systems</h1>
+            <p class="hero-subtitle">Dopasowane rozwiązania.</p>
+            <div class="hero-actions">
+              <a href="#oferta" class="btn btn-primary btn-lg">Poznaj ofertę <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#kontakt" class="btn btn-outline btn-lg">Skontaktuj się</a>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🌍</div>
-            <h3 class="feature-title">Multibranding</h3>
-            <p class="feature-desc">Pierwszym założeniem naszej firmy była eliminacja ograniczeń wynikających z oferty jednego producenta, a drugim stworzenie oferty kompleksowej.</p>
-            <p class="feature-desc" style="margin-top:10px">Nawet najlepsze i największe marki wymagają dodatkowych akcesoriów lub współprac systemowych – to nasza specjalność i coś, co nas wyróżnia.</p>
+
+          <!-- Slide 1: SALVO -->
+          <div class="hero-content-block" data-index="1">
+            <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>DYSTRYBUCJA NA WYŁĄCZNOŚĆ</p>
+            <h1 class="hero-title">SALVO by D</h1>
+            <p class="hero-subtitle">Ogranicza wypadki - wspiera bezpieczeństwo.</p>
+            <div class="hero-actions">
+              <a href="#oferta" class="btn btn-primary btn-lg">Poznaj ofertę <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#kontakt" class="btn btn-outline btn-lg">Skontaktuj się</a>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">📣</div>
-            <h3 class="feature-title">Marketing</h3>
-            <p class="feature-desc">Dynamika rynku wymaga od nas posiadanie własnego działu marketingu. Projektujemy i aktualizujemy własne strony internetowe.</p>
-            <p class="feature-desc" style="margin-top:10px">Tworzymy i promujemy własne media społecznościowe. Produkujemy własne filmy promocyjne i prezentacje. Budujemy naszą niezależność.</p>
+
+          <!-- Slide 2: GIOVI -->
+          <div class="hero-content-block" data-index="2">
+            <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>DYSTRYBUCJA NA WYŁĄCZNOŚĆ</p>
+            <h1 class="hero-title">GIOVI by D</h1>
+            <p class="hero-subtitle">Bramy szybkobieżne dopasowane do potrzeb rynku.</p>
+            <div class="hero-actions">
+              <a href="#oferta" class="btn btn-primary btn-lg">Poznaj ofertę <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#kontakt" class="btn btn-outline btn-lg">Skontaktuj się</a>
+            </div>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon" aria-hidden="true">🛠️</div>
-            <h3 class="feature-title">Wsparcie techniczne</h3>
-            <p class="feature-desc">Na każdym etapie współpracy oferujemy profesjonalne doradztwo techniczne oraz serwis gwarancyjny i pogwarancyjny.</p>
-            <p class="feature-desc" style="margin-top:10px">Nasi specjaliści pomogą Ci na każdym etapie sprzedaży, instalacji i serwisu – wskażemy kierunki rozwoju i aktualne trendy.</p>
+
+          <!-- Slide 3: GAPOSA -->
+          <div class="hero-content-block" data-index="3">
+            <p class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>DYSTRYBUCJA NA WYŁĄCZNOŚĆ</p>
+            <h1 class="hero-title">GAPOSA by D</h1>
+            <p class="hero-subtitle">Włoskie napędy i automatyka najwyższej jakości.</p>
+            <div class="hero-actions">
+              <a href="#oferta" class="btn btn-primary btn-lg">Poznaj ofertę <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#kontakt" class="btn btn-outline btn-lg">Skontaktuj się</a>
+            </div>
           </div>
+
         </div>
 
-        <!-- Training Box -->
-        <div class="training-box">
-          <div class="training-content">
-            <h3 class="training-title">Wsparcie techniczne i centrum szkoleniowe</h3>
-            <p class="training-desc">
-              Nawet najlepsze produkty wymagają wsparcia technicznego. Posiadamy własny dział serwisu oraz <strong>salę konferencyjno-szkoleniową</strong> z funkcjonalną ekspozycją.
-            </p>
-            <p class="training-desc">
-              Nasi specjaliści pomogą Ci na każdym etapie sprzedaży, instalacji i serwisu. Dodatkowo wskażemy Ci kierunki rozwoju i aktualne trendy.
-            </p>
-            <p style="font-weight:600;color:var(--color-primary);margin-bottom:12px;font-size:0.9rem;">Podstawowe zakresy szkoleniowe:</p>
-            <ul class="training-list">
-              <li>Praktyczne warsztaty z ekspertami</li>
-              <li>Prezentacja nowości produktowych</li>
-              <li>Marketing i obsługa klienta w dzisiejszych realiach</li>
-            </ul>
-          </div>
-          <div class="training-image">
-            <img src="img/cezab-distribtuion-base.jpg" alt="Siedziba Cezab Distribution" />
-          </div>
+        <!-- Right: vertical slide indicators -->
+        <div class="hero-nav-vertical">
+          <button class="hero-nav-item active" data-slide="0">
+            <span class="hero-nav-indicator">
+               <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+            </span>
+            <span class="hero-nav-label">D-TECH</span>
+          </button>
+          <button class="hero-nav-item" data-slide="1">
+            <span class="hero-nav-indicator">
+               <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+            </span>
+            <span class="hero-nav-label">SALVO by D</span>
+          </button>
+          <button class="hero-nav-item" data-slide="2">
+            <span class="hero-nav-indicator">
+               <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+            </span>
+            <span class="hero-nav-label">GIOVI by D</span>
+          </button>
+          <button class="hero-nav-item" data-slide="3">
+            <span class="hero-nav-indicator">
+               <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+            </span>
+            <span class="hero-nav-label">GAPOSA by D</span>
+          </button>
         </div>
 
       </div>
+
+      <!-- Bottom: scroll indicator -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Odkryj więcej</span>
+        <div class="scroll-arrow-down">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </div>
+
     </section>
 
     <!-- ===== OFERTA (Segments) ===== -->
-    <section id="oferta" class="section" aria-labelledby="oferta-title">
+    <section id="oferta" class="section section--alt" aria-labelledby="oferta-title">
       <div class="container">
         <div class="segment-section-logo">
           <img src="img/cezab-distribution-logo.png" alt="CEZAB Distribution" />
@@ -276,6 +231,61 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== O NAS (Features) ===== -->
+    <section id="o-nas" class="section" aria-labelledby="o-nas-title">
+      <div class="container">
+        <span class="section-label">O nas</span>
+        <h2 class="section-title" id="o-nas-title">Dlaczego warto współpracować z CEZAB Distribution?</h2>
+        <p class="section-subtitle">Jesteśmy firmą multibrandową, która łączy wieloletnie doświadczenie z szeroką ofertą produktową i indywidualnym podejściem do klienta.</p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏆</div>
+            <h3 class="feature-title">Doświadczenie</h3>
+            <p class="feature-desc">Zespół specjalistów wywodzący się z firmy Grupa CEZAB – działającej w branży systemów automatyki, bram oraz systemów przeładunkowych.</p>
+            <p class="feature-desc" style="margin-top:10px">Od analizy potrzeb po własną politykę firmy – ponad 20 lat doświadczeń sprzedażowych i instalatorskich dla klientów B2B i B2C.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🌍</div>
+            <h3 class="feature-title">Multibranding</h3>
+            <p class="feature-desc">Pierwszym założeniem naszej firmy była eliminacja ograniczeń wynikających z oferty jednego producenta, a drugim stworzenie oferty kompleksowej.</p>
+            <p class="feature-desc" style="margin-top:10px">Nawet najlepsze i największe marki wymagają dodatkowych akcesoriów lub współprac systemowych – to nasza specjalność i coś, co nas wyróżnia.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📣</div>
+            <h3 class="feature-title">Marketing</h3>
+            <p class="feature-desc">Dynamika rynku wymaga od nas posiadanie własnego działu marketingu. Projektujemy i aktualizujemy własne strony internetowe.</p>
+            <p class="feature-desc" style="margin-top:10px">Tworzymy i promujemy własne media społecznościowe. Produkujemy własne filmy promocyjne i prezentacje. Budujemy naszą niezależność.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SZKOLENIA (Training Box) ===== -->
+    <section id="szkolenia" class="section section--alt">
+      <div class="container">
+        <div class="training-box" style="margin-top: 0;">
+          <div class="training-content">
+            <h3 class="training-title">Wsparcie techniczne i centrum szkoleniowe</h3>
+            <p class="training-desc">
+              Nawet najlepsze produkty wymagają wsparcia technicznego. Posiadamy własny dział serwisu oraz <strong>salę konferencyjno-szkoleniową</strong> z funkcjonalną ekspozycją.
+            </p>
+            <p class="training-desc">
+              Nasi specjaliści pomogą Ci na każdym etapie sprzedaży, instalacji i serwisu. Dodatkowo wskażemy Ci kierunki rozwoju i aktualne trendy.
+            </p>
+            <p style="font-weight:600;color:var(--color-primary);margin-bottom:12px;font-size:0.9rem;">Podstawowe zakresy szkoleniowe:</p>
+            <ul class="training-list">
+              <li>Praktyczne warsztaty z ekspertami</li>
+              <li>Prezentacja nowości produktowych</li>
+              <li>Marketing i obsługa klienta w dzisiejszych realiach</li>
+            </ul>
+          </div>
+          <div class="training-image">
+            <img src="img/cezab-distribtuion-base.jpg" alt="Siedziba Cezab Distribution" />
+          </div>
         </div>
       </div>
     </section>

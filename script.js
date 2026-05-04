@@ -85,3 +85,56 @@ document.querySelectorAll('.features-grid, .segments-grid, .brands-grid').forEac
     child.style.transitionDelay = `${i * 80}ms`;
   });
 });
+
+// ===== HERO FULL-WIDTH SLIDER =====
+(function() {
+  const slides = document.querySelectorAll('.hero-slide-wrap');
+  const navItems = document.querySelectorAll('.hero-nav-item');
+  const textBlocks = document.querySelectorAll('.hero-content-block');
+  
+  if (!slides.length || !navItems.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(index) {
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+
+    // Remove active classes
+    slides[current].classList.remove('active');
+    navItems[current].classList.remove('active');
+    if (textBlocks[current]) textBlocks[current].classList.remove('active');
+    
+    current = index;
+    
+    // Add active classes
+    slides[current].classList.add('active');
+    navItems[current].classList.add('active');
+    if (textBlocks[current]) textBlocks[current].classList.add('active');
+
+    // Restart progress animation
+    navItems.forEach(n => {
+      const bar = n.querySelector('.circle');
+      if (bar) { bar.style.animation = 'none'; bar.offsetHeight; bar.style.animation = ''; }
+    });
+    const activeBar = navItems[current].querySelector('.circle');
+    if (activeBar) { activeBar.style.animation = 'none'; activeBar.offsetHeight; activeBar.style.animation = 'circleProgress 5s linear forwards'; }
+  }
+
+  function next() { goTo(current + 1); }
+
+  function start() { timer = setInterval(next, 5000); }
+  function reset() { clearInterval(timer); start(); }
+
+  navItems.forEach((btn, i) => {
+    btn.addEventListener('click', () => { goTo(i); reset(); });
+  });
+
+  // Init first bar
+  const firstBar = navItems[0]?.querySelector('.circle');
+  if (firstBar) firstBar.style.animation = 'circleProgress 5s linear forwards';
+
+  start();
+})();
+
