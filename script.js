@@ -91,11 +91,38 @@ document.querySelectorAll('.features-grid, .segments-grid, .brands-grid').forEac
   const slides = document.querySelectorAll('.hero-slide-wrap');
   const navItems = document.querySelectorAll('.hero-nav-item');
   const textBlocks = document.querySelectorAll('.hero-content-block');
+  const heroSection = document.getElementById('hero');
   
-  if (!slides.length || !navItems.length) return;
+  if (!slides.length) return;
 
   let current = 0;
   let timer;
+
+  // --- Mobile dot indicators ---
+  let mobileDots = [];
+  function buildMobileDots() {
+    if (!heroSection) return;
+    let dotWrap = document.getElementById('hero-mobile-dots');
+    if (!dotWrap) {
+      dotWrap = document.createElement('div');
+      dotWrap.id = 'hero-mobile-dots';
+      heroSection.appendChild(dotWrap);
+    }
+    dotWrap.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'hero-mobile-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Slajd ${i + 1}`);
+      dot.addEventListener('click', () => { goTo(i); reset(); });
+      dotWrap.appendChild(dot);
+      mobileDots.push(dot);
+    });
+  }
+  buildMobileDots();
+
+  function updateDots(index) {
+    mobileDots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
 
   function goTo(index) {
     if (index >= slides.length) index = 0;
@@ -103,23 +130,26 @@ document.querySelectorAll('.features-grid, .segments-grid, .brands-grid').forEac
 
     // Remove active classes
     slides[current].classList.remove('active');
-    navItems[current].classList.remove('active');
+    if (navItems[current]) navItems[current].classList.remove('active');
     if (textBlocks[current]) textBlocks[current].classList.remove('active');
     
     current = index;
     
     // Add active classes
     slides[current].classList.add('active');
-    navItems[current].classList.add('active');
+    if (navItems[current]) navItems[current].classList.add('active');
     if (textBlocks[current]) textBlocks[current].classList.add('active');
+    updateDots(current);
 
-    // Restart progress animation
+    // Restart circular progress animation
     navItems.forEach(n => {
       const bar = n.querySelector('.circle');
       if (bar) { bar.style.animation = 'none'; bar.offsetHeight; bar.style.animation = ''; }
     });
-    const activeBar = navItems[current].querySelector('.circle');
-    if (activeBar) { activeBar.style.animation = 'none'; activeBar.offsetHeight; activeBar.style.animation = 'circleProgress 5s linear forwards'; }
+    if (navItems[current]) {
+      const activeBar = navItems[current].querySelector('.circle');
+      if (activeBar) { activeBar.style.animation = 'none'; activeBar.offsetHeight; activeBar.style.animation = 'circleProgress 5s linear forwards'; }
+    }
   }
 
   function next() { goTo(current + 1); }
@@ -131,10 +161,21 @@ document.querySelectorAll('.features-grid, .segments-grid, .brands-grid').forEac
     btn.addEventListener('click', () => { goTo(i); reset(); });
   });
 
+  // Touch swipe support
+  let touchStartX = 0;
+  heroSection?.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  heroSection?.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { goTo(dx < 0 ? current + 1 : current - 1); reset(); }
+  }, { passive: true });
+
   // Init first bar
-  const firstBar = navItems[0]?.querySelector('.circle');
-  if (firstBar) firstBar.style.animation = 'circleProgress 5s linear forwards';
+  if (navItems[0]) {
+    const firstBar = navItems[0].querySelector('.circle');
+    if (firstBar) firstBar.style.animation = 'circleProgress 5s linear forwards';
+  }
 
   start();
 })();
+
 
